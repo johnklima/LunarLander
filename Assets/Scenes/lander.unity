@@ -879,8 +879,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1824638730}
   mouseSensitivity: 10
-  dstFromTarget: 2
-  pitchMinMax: {x: -40, y: 85}
+  dstFromTarget: 5
+  pitchMinMax: {x: -5, y: 85}
   rotationSmoothTime: 0.12
   lockCursor: 0
   lockMovement: 0
@@ -1113,7 +1113,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539464266}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0028a57b2ef4c7a45983f4d1eef276b3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -1396,7 +1396,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966075785}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0028a57b2ef4c7a45983f4d1eef276b3, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
