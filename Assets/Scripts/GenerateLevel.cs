@@ -10,11 +10,10 @@ public class GenerateLevel : MonoBehaviour
     public float maxScale = 10.0f;
     public int numPads = 8;
 
-   
     //objects to clone for build
     public GameObject obstacle;
     public GameObject pad;
-    
+
     //place in hierarchy to put them
     public Transform obstacles;
     public Transform pads;
@@ -23,15 +22,15 @@ public class GenerateLevel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //give it a random seed (explain this)
-        Random.InitState((int)System.DateTime.Now.Ticks);
 
-        //randomly position and scale a bunch of boxes on the ground plane
-        for(int i = 0; i < numObstacles; i++)
+        //give it a random seed (explain this)
+        Random.InitState( (int) System.DateTime.Now.Ticks );
+
+        for (int i = 0; i < numObstacles; i++)
         {
             //lets make a new one
             GameObject newobj = Instantiate(obstacle, obstacles);
-
+                        
             //lets put it someplace
             float x = Random.Range(-50f, 50f);
             float z = Random.Range(-50f, 50f);
@@ -48,6 +47,7 @@ public class GenerateLevel : MonoBehaviour
             newobj.transform.localScale = scale;
 
         }
+
         //now remove/delete the creating object so I have exactly numObstacles in my list
         obstacle.transform.parent = null;
         Destroy(obstacle);
@@ -56,7 +56,8 @@ public class GenerateLevel : MonoBehaviour
         //a terrain obstacle. simplest thing is to drop them from a height and let 
         //them fall, constraining x,z physics. later we will need to disable physics,
         //AFTER they all hit the ground. prolly check physics sleep.
-        for(int i = 0; i < numPads; i++)
+
+        for (int i = 0; i < numPads; i++)
         {
             //if I chose a randomly placed obstacle as a start point, I know
             //it will fall to the center point of an obstacle, with a good chance of
@@ -80,6 +81,14 @@ public class GenerateLevel : MonoBehaviour
         pad.transform.parent = null;
         Destroy(pad);
 
+
+
+
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
