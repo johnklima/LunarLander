@@ -40,6 +40,8 @@ public class OrbitCamera : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+        //initialize pitch to -1
+        pitch = -1;
     }
 
     // LateUpdate is called once per frame, after everything else
@@ -50,7 +52,7 @@ public class OrbitCamera : MonoBehaviour
 
     void CameraMovement()
     {
-        yaw += Input.GetAxis("Mouse X") * mouseSensitivity;
+        //yaw += Input.GetAxis("Mouse X") * mouseSensitivity;
         pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
         pitch = Mathf.Clamp(pitch, pitchMinMax.x, pitchMinMax.y);
 
